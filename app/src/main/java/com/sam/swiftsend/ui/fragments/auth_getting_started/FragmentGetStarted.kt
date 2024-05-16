@@ -21,6 +21,10 @@ class FragmentGetStarted : Fragment() {
         binding.btnLogin.setOnClickListener{
             binding.root.findNavController().navigate(R.id.action_fragmentGetStarted_to_fragmentLogin)
         }
+
+        binding.btnRegister.setOnClickListener{
+            binding.root.findNavController().navigate(R.id.action_fragmentGetStarted_to_fragmentRegister)
+        }
         return binding.root
     }
 }

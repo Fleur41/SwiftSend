@@ -1,6 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_back"
+            app:elevation="0dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to SwiftSend!\nRegister Here!"
+            style="@style/TextAppearance.Material3.DisplaySmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/goBack"
+            android:layout_marginTop="16dp"
+            android:id="@+id/txtRegister"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtRegister"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_marginTop="16dp"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtUsername"
+                android:hint="Username"
+                android:inputType="text"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilEmail"
+            app:layout_constraintTop_toBottomOf="@id/tilUsername"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_marginTop="16dp"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtEmail"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilPassword"
+            app:layout_constraintTop_toBottomOf="@id/tilEmail"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_marginTop="8dp"
+            app:passwordToggleEnabled="true"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtPassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilConfirmPassword"
+            app:layout_constraintTop_toBottomOf="@id/tilPassword"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_marginTop="8dp"
+            app:passwordToggleEnabled="true"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtConfirmPassword"
+                android:hint="Confirm password"
+                android:inputType="textPassword"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRegister"
+            android:text="Register"
+            app:layout_constraintTop_toBottomOf="@id/tilConfirmPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            app:cornerRadius="6dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/alt_login">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1.5"
+                android:background="#444444"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Or Login with"
+                android:layout_weight="2"
+                android:textAlignment="center"/>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1.5"
+                android:background="#444444"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGoogle"
+            android:text="Sign In with Google"
+            android:drawableLeft="@drawable/ic_google"
+            android:padding="16dp"
+            android:backgroundTint="?attr/colorSurface"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            app:strokeColor="?attr/colorOnSurface"
+            app:strokeWidth="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alt_login"
+            android:layout_marginTop="32dp"
+            app:cornerRadius="6dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
