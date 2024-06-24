@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.sam.swiftsend.ui.fragments.auth_login.LoginVM" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -155,6 +161,7 @@
             app:layout_constraintTop_toBottomOf="@id/alt_login"
             android:layout_marginTop="32dp"
             app:cornerRadius="6dp"
+            android:onClick="@{() -> vm.signInWithGoogle()}"
             />
 
 

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "177864576363",
+    "project_id": "swiftsend-519ce",
+    "storage_bucket": "swiftsend-519ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177864576363:android:e439d3dcb557ec6653902e",
+        "android_client_info": {
+          "package_name": "com.sam.swiftsend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177864576363-p9n3id5cr4rlfjbadgdjot9v244dud53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sam.swiftsend",
+            "certificate_hash": "397c85dacd92f953fb863e5e3b6e417b8a561557"
+          }
+        },
+        {
+          "client_id": "177864576363-4103frintmf61ekbc4mtdlvbghk19138.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASJX0xt4wWL3CYufFdRZUr7_FIw2P2Pes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177864576363-4103frintmf61ekbc4mtdlvbghk19138.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sam.swiftsend.ui.fragments.auth_register.RegisterVM" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -43,6 +48,7 @@
                 android:id="@+id/edtUsername"
                 android:hint="Username"
                 android:inputType="text"
+                android:text="@={viewModel.username}"
                 />
 
 
@@ -67,6 +73,7 @@
                 android:id="@+id/edtEmail"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
+                android:text="@={viewModel.email}"
                 />
 
 
@@ -90,6 +97,7 @@
                 android:id="@+id/edtPassword"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:text="@={viewModel.password}"
                 />
 
 
@@ -112,6 +120,7 @@
                 android:id="@+id/edtConfirmPassword"
                 android:hint="Confirm password"
                 android:inputType="textPassword"
+                android:text="@={viewModel.confirmPassword}"
                 />
 
 
@@ -130,6 +139,7 @@
             android:layout_marginTop="16dp"
             android:padding="16dp"
             app:cornerRadius="6dp"
+            android:onClick="@{() -> viewModel.registerUser()}"
             />
 
 

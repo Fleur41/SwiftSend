@@ -13,7 +13,7 @@
             android:layout_height="match_parent"
             android:id="@+id/auth_host"
             android:name="androidx.navigation.fragment.NavHostFragment"
-            android:navGraph="@navigation/nav_auth"
+            app:navGraph="@navigation/nav_auth"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
